@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Привітання</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="greetingText"> Greeting</h1>
+        <input type="text" id="userName" placeholder="Введіть своє ім’я">
+        <button class="greeting" onclick="showGreeting()">Вітаннячка</button>
+        
+        <div id="greetingContainer">
+            <img src="cat.jpg" alt="Вітаннячка">
+            <p id="greetingText"></p>
+        </div>
+    </div>
+
+    <script>
+        function showGreeting() {
+            
+            const name = document.getElementById('userName').value;
+            if (name.trim() === "") { 
+                alert("Введіть своє ім’я");
+                return;
+            }
+            const greetingText = `Вітаємо, ${name}!`;
+            document.getElementById('greetingText').textContent = greetingText;
+            document.getElementById('greetingContainer').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+body {
+    font-family: URW Chancery L, cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    background-color: #e19f9f;
+}
+
+.container {
+    background-color: rgb(190, 198, 253);
+    padding: 122px;
+    border-radius: 15px;
+    text-align: center;
+}
+.greetingText {
+    font-size: 63px;
+    font-family: URW Chancery L, cursive;
+   
+
+}
+.greeting{  font-size: 33px;
+    font-family: URW Chancery L, cursive;
+    
+}
+
+h1 {
+    color: #000000;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 22px); 
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 30px;
+    font-family: URW Chancery L, cursive;
+}
+
+button {
+    padding: 30px 60px;
+    font-size: 16px;
+    background-color: #ca89ea;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: URW Chancery L, cursive;
+}
+
+button:hover {
+    background-color: #e19f9f;
+}
+
+#greetingContainer {
+    display: none;
+    margin-top: 20px;
+}
+
+#greetingContainer img {
+    max-width: 100%;
+    height: 500px;
+    margin-bottom: 10px;
+}
+
+#greetingText {
+    font-size: 63px;
+    color: #333;
+    font-family: URW Chancery L, cursive;
+}
