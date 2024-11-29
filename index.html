@@ -10,26 +10,59 @@
     <div class="container">
         <h1 class="greetingText"> Greeting</h1>
         <input type="text" id="userName" placeholder="Введіть своє ім’я">
+        <input type="text" id="userSurName" placeholder="Введіть своє прізвище">
+
         <button class="greeting" onclick="showGreeting()">Вітаннячка</button>
         
         <div id="greetingContainer">
             <img src="cat.jpg" alt="Вітаннячка">
             <p id="greetingText"></p>
         </div>
+        <div class="Multipymoney">
+            <input type="text" id="Multipy_money" placeholder="Введіть суму, яку ви хочете подвоїти">
+            <button class="multiplyMoney" onclick="multiplyMoney()">Подвоїти суму</button>
+        </div >
+        
+            <p id="resultText"></p>
+       
+      
     </div>
+    </div>
+    
 
     <script>
         function showGreeting() {
-            
-            const name = document.getElementById('userName').value;
-            if (name.trim() === "") { 
+            const name = document.getElementById('userName').value.trim();
+            const surname = document.getElementById('userSurName').value.trim();
+    
+            if (name === "") {
                 alert("Введіть своє ім’я");
                 return;
             }
-            const greetingText = `Вітаємо, ${name}!`;
+    
+            if (surname === "") {
+                alert("Введіть своє прізвище");
+                return;
+            }
+    
+            const greetingText = `Вітаємо, ${name} ${surname}!`;
             document.getElementById('greetingText').textContent = greetingText;
             document.getElementById('greetingContainer').style.display = 'block';
         }
+        function multiplyMoney() {
+            const amount = document.getElementById('Multipy_money').value.trim();
+            const numAmount = parseFloat(amount);
+
+            if (isNaN(numAmount) || numAmount <= 0) {
+                alert("Введіть коректну числову суму.");
+                return;
+            }
+
+            const result = numAmount * 2;
+            document.getElementById('resultText').textContent = `Подвоєна сума: ${result}`;
+        }
+        
     </script>
+   
 </body>
 </html>
